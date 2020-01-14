@@ -1,11 +1,14 @@
 public class BinaryGap {
 
-    public static Integer findBinaryGap(String binaryValue) {
+    public static Integer findBinaryGap(Integer intValue) {
+
+        //convert Integer to binary value
+        String binaryValue = intValue.toBinaryString(intValue);
 
         //longest gap value
         Integer returnValue = 0;
 
-        //table of splitted parts of string
+        //array of splitted up by '1' parts of string
         String splitValue[] = binaryValue.split("1");
 
         int endValue = splitValue.length;
@@ -24,10 +27,11 @@ public class BinaryGap {
     }
 
     public static void main(String[] args) {
+
         Integer val = 32; //2147483; //10092;
-        String vals = val.toBinaryString(val);
-        Integer gapVal = findBinaryGap(vals);
-        System.out.println("Check Binary = " + vals);
+        BinaryGap binaryGap = new BinaryGap();
+        Integer gapVal = binaryGap.findBinaryGap(val);
+        System.out.println("Check Binary = " + val);
         System.out.println("Longest Gap Value = " + gapVal);
     }
 }
