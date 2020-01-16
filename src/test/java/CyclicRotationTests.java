@@ -14,6 +14,7 @@ public class CyclicRotationTests {
     @DataProvider(name="test1")
     public Object[][] createData1(){
         return new Object[][]{
+                new Object[] { new int[] { 9, 7, 1 },        2,  new int[] { 7, 1, 9 } },
                 new Object[] { new int[] { 3, 8, 9, 7, 6 },  3,  new int[] { 9, 7, 6, 3, 8 } },
                 new Object[] { new int[] { 0, 0, 0 },        1,  new int[] { 0, 0, 0 } },
                 new Object[] { new int[] { 1, 2, 3, 4 },     4,  new int[] { 1, 2, 3, 4 } },
