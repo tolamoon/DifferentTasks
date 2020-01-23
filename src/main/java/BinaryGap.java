@@ -9,7 +9,7 @@ public class BinaryGap {
         Integer returnValue = 0;
 
         //array of splitted up by '1' parts of string
-        String splitValue[] = binaryValue.split("1");
+        String[] splitValue = binaryValue.split("1");
 
         int endValue = splitValue.length;
 
@@ -28,7 +28,7 @@ public class BinaryGap {
 
     public static void main(String[] args) {
 
-        Integer val = 32; //2147483; //10092;
+        Integer val = 42; //2147483; //10092;
         BinaryGap binaryGap = new BinaryGap();
         Integer gapVal = binaryGap.findBinaryGap(val);
         System.out.println("Check Binary = " + val);
