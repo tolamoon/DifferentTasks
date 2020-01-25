@@ -1,6 +1,6 @@
 package binarytree;
 
-public class Node {
+class Node {
 
     int data;
     Node left;
