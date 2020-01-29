@@ -19,12 +19,11 @@ public class Palindrome {
     public static void main(String[] args)
     {
         String str = "abba";
-        Palindrome p = new Palindrome();
-        String res = p.isPalindrome(str);
+        String res = isPalindrome(str);
 
         if (res=="true")
-            System.out.print("Yes,it's a palindrome.");
+            System.out.print("Yes, palindrome.");
         else
-            System.out.print("No,it's not a palindrome.");
+            System.out.print("No, not palindrome.");
     }
 }
