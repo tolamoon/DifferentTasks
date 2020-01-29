@@ -4,12 +4,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PalindromeTest {
-    private Palindrome pal;
-
-    @BeforeTest
-    public void setUp(){
-        pal = new Palindrome();
-    }
 
     @DataProvider(name="palindrome")
     public Object[][] testData(){
@@ -22,6 +16,6 @@ public class PalindromeTest {
     }
     @Test(dataProvider = "palindrome")
     public void verifySolution(String example, String expected){
-        Assert.assertEquals(pal.isPalindrome(example), expected);
+        Assert.assertEquals(Palindrome.isPalindrome(example), expected);
     }
 }

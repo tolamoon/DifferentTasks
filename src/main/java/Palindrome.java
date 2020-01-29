@@ -1,6 +1,6 @@
 public class Palindrome {
 
-    public static String isPalindrome(String str) {
+    static String isPalindrome(String str) {
 
         int begin = 0, end = str.length() - 1;
 
