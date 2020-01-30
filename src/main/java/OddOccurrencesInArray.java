@@ -1,20 +1,42 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class OddOccurrencesInArray {
 
-    public int solution(int[] A){
-        //length given array
-        int lengthA = A.length;
+    static int solution(int[] A){
 
-        int result=0;
-        for(int i=0; i<lengthA; i++){
-            //xor of 0 and each element of array
-            result = result ^ A[i];
+//        int result = 0;
+//        for (int aA : A) {
+//            //xor each element of array
+//            result = result ^ aA;
+//        }
+//        return result;
+
+        int oddCount = 0;
+        for (int element: A) {
+            if(element % 2 != 0)
+                oddCount++;
         }
-        return result;
+        return oddCount;
+    }
+    private static Map<Integer, Integer> countOccurences(int[] array){
+        Map<Integer,Integer> newMap = new HashMap<Integer, Integer>();
+
+        for (int anArray : array) {
+            if (newMap.containsKey(anArray)) {
+                int val = newMap.get(anArray);
+                newMap.put(anArray, val + 1);
+            } else {
+                newMap.put(anArray, 1);
+            }
+        }
+        return newMap;
     }
 
+
     public static void main(String[] args){
-        OddOccurrencesInArray odd = new OddOccurrencesInArray();
-        int exA[] = new int[]{2, 3, 5, 4, 5, 2, 4, 3, 5, 2, 4, 4, 2};
-        System.out.println("Odd number in given array is: " + odd.solution(exA));
+        int exA[] = new int[]{1, 2, 3, 5, 4, 5, 2, 4, 3, 5, 2, 4, 4, 2};
+        System.out.println(solution(exA) + " odd occurences in array.");
+        System.out.println("Duplicates in array: " + countOccurences(exA));
     }
 }

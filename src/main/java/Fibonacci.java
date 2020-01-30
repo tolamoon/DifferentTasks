@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Fibonacci {
+    // Nth element of fibonacci series using loop
     private static int fibonacci(int n) {
 
         int prev = 0;
@@ -14,10 +15,19 @@ public class Fibonacci {
         return curr;
     }
 
+    // Nth element of fibonacci series using recursion
+    private static int fibonacci2(int number){
+        if(number == 1 || number == 2){
+            return 1;
+        }
+        return fibonacci(number-1) + fibonacci(number -2); //tail recursion
+}
+
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         scan.close();
         System.out.println(fibonacci(n));
+        System.out.println(fibonacci2(n));
     }
 }

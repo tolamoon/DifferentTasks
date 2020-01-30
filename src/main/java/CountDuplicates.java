@@ -2,7 +2,7 @@ import java.util.*;
 
 public class CountDuplicates {
 
-    public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> array){
+    private static ArrayList<Integer> removeDuplicates(ArrayList<Integer> array){
         ArrayList<Integer> newList = new ArrayList<Integer>();
 
         for(Integer i: array){
@@ -13,18 +13,18 @@ public class CountDuplicates {
         return newList;
     }
 
-    public static Map<Integer, Integer> countDuplicates(ArrayList<Integer> array){
-        Map<Integer, Integer> duplicatesNo = new HashMap<Integer, Integer>();
+    private static Map<Integer, Integer> countDuplicates(ArrayList<Integer> array){
+        Map<Integer, Integer> duplicates = new HashMap<Integer, Integer>();
 
         for(Integer i: array){
-            if(duplicatesNo.containsKey(i)){
-                duplicatesNo.put(i, duplicatesNo.get(i) + 1);
+            if(duplicates.containsKey(i)){
+                duplicates.put(i, duplicates.get(i) + 1);
             }
             else {
-                duplicatesNo.put(i, 1);
+                duplicates.put(i, 1);
             }
         }
-        return duplicatesNo;
+        return duplicates;
     }
 
     public static void main(String[] args) {

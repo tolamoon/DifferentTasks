@@ -3,15 +3,15 @@ import org.testng.Assert;
 public class FrogJump {
 
     //x-start, y-end, d-distance of 1 jump
-    public int solution(int x, int y, int d){
+    int solution(int x, int y, int d){
         int distanceToGo = y - x;
-        int jumpNo = distanceToGo/d;
+        int jumps = distanceToGo/d;
 
         //if remainder is present add one jump
         if(distanceToGo % d != 0)
-            jumpNo++;
+            jumps++;
 
-        return jumpNo;
+        return jumps;
     }
 
     public static void main(String[] args){

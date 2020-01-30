@@ -10,24 +10,27 @@ public class MinMaxSum {
 
         for(int i=0; i<5; i++)
         {
-            long curr = arr[i];
-            if(max < curr) {
-                max = curr;
+            long current = arr[i];
+
+            if(max < current) {
+                max = current;
             }
-            if(min > curr) {
-                min = curr;
+            if(min > current) {
+                min = current;
             }
-            sum += curr;
+            sum = sum + current;
         }
 
         long minSum = sum - max;//Removes the largest of the 5 numbers to get the min sum
         long maxSum = sum - min;//Removes the smallest of the 5 numbers to get the max sum
+
         System.out.println(minSum + " " + maxSum);
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[] arr = new int[5];
+
         for(int i=0; i<5; i++){
             arr[i] = in.nextInt();
         }

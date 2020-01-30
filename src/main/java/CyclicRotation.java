@@ -1,6 +1,6 @@
 public class CyclicRotation {
 
-    public int[] rotateArray(int[] A, int K) {
+    static int[] rotateArray(int[] A, int K) {
 
         //number of elements in A array
         int N = A.length;
@@ -25,19 +25,17 @@ public class CyclicRotation {
     }
 
     public static void main(String[] args){
-        int[] exA = { 1, 2, 3, 4 }; //N=4
+        int[] exA = { 1, 2, 3, 4, 5 }; //N=4
         int exK = 3; //K=3
-        CyclicRotation cyclicRotation = new CyclicRotation();
-        //
-        int[] expectedResult = cyclicRotation.rotateArray(exA, exK);
+        int[] expectedResult = rotateArray(exA, exK);
 
         System.out.print("Given array is: ");
-        for(int i=0; i<exA.length; i++){
-            System.out.print(exA[i] + ", ");
+        for (int anExA : exA) {
+            System.out.print(anExA + ", ");
         }
-        System.out.print("Rotated array is: ");
-        for(int i=0; i<expectedResult.length; i++){
-            System.out.print(expectedResult[i] + ", ");
+        System.out.print("\nRotated array " + exK + " times: ");
+        for (int anExpectedResult : expectedResult) {
+            System.out.print(anExpectedResult + ", ");
         }
     }
 }
