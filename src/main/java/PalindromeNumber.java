@@ -2,24 +2,18 @@ import java.util.Scanner;
 
 public class PalindromeNumber {
 
-    public static boolean isPalindrome(int number) {
+    private static boolean isPalindrome(int number) {
         int temp = number; // copied number into variable
         int reverse = 0;
 
         while (temp != 0) {
-            int remainder = temp % 10;
-            System.out.println("remainder:" + remainder);
-            reverse = reverse * 10 + remainder;
-            System.out.println("reverse:" + reverse);
-            temp = temp / 10;
-            System.out.println("temp:" + temp);
+            int remainder = temp % 10; //1
+            reverse = reverse * 10 + remainder; //2
+            temp = temp / 10; //3
         }
         // if original and reversed number is equal means
         // number is palindrome
-        if (number == reverse) {
-            return true;
-        }
-        return false;
+        return number == reverse;
     }
 
     public static void main(String[] args) {
