@@ -1,13 +1,13 @@
 package binarytree;
 
-class BinarySearchTree{
-    Node root;
+class BinarySearchTree {
+    private Node root;
 
-    boolean checkBST(Node root){
+    private boolean checkBST(Node root){
         return checkBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    boolean checkBST(Node root, int left, int right){
+    private boolean checkBST(Node root, int left, int right){
         if(root == null)
             return true;
         if(root.data <= left || root.data >= right)
@@ -16,7 +16,7 @@ class BinarySearchTree{
         return checkBST(root.left, left, root.data) && checkBST(root.right, root.data, right);
     }
 
-    Node searchKey(Node root, int key){
+    private Node searchKey(Node root, int key){
         if(root == null || root.data == key)
             return root;
         if(key < root.data){
@@ -29,9 +29,11 @@ class BinarySearchTree{
         }
     }
 
-    void insert(int key) { root = insertRecursive(root, key); }
+    void insert(int key) {
+        root = insertRecursive(root, key);
+    }
 
-    Node insertRecursive(Node root, int key){
+    private Node insertRecursive(Node root, int key){
         if(root == null){
             root = new Node(key);
             return root;
@@ -48,11 +50,11 @@ class BinarySearchTree{
         return root;
     }
 
-    void inorderPrint()  {
+    private void inorderPrint()  {
         inorderRecursive(root);
     }
 
-    void inorderRecursive(Node root) {
+    private void inorderRecursive(Node root) {
         if (root != null) {
             //first recur on left child
             inorderRecursive(root.left);
@@ -61,11 +63,11 @@ class BinarySearchTree{
         }
     }
 
-    void preorderPrint() {
+    private void preorderPrint() {
         preorderRecursive(root);
     }
 
-    void preorderRecursive(Node root) {
+    private void preorderRecursive(Node root) {
         if(root != null){
             //first print data of node
             System.out.print(root.data+" ");
@@ -74,11 +76,11 @@ class BinarySearchTree{
         }
     }
 
-    void postorderPrint(){
+    private void postorderPrint(){
         postorderRecursive(root);
     }
 
-    void postorderRecursive(Node root){
+    private void postorderRecursive(Node root){
         if(root != null){
             //first recur on right child
             postorderRecursive(root.left);

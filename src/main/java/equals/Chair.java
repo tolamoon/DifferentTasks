@@ -6,7 +6,7 @@ public class Chair {
     private String manufacturer;
     private int productionYear;
 
-    public Chair(String model, String manufacturer, int productionYear) {
+    private Chair(String model, String manufacturer, int productionYear) {
         this.model = model;
         this.manufacturer = manufacturer;
         this.productionYear = productionYear;

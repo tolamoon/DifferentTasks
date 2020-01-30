@@ -27,7 +27,7 @@ public class OddOcurrencesInArrayTests {
 
     @Test(dataProvider = "test")
     public void verifySolution(int[] exA, int expRes){
-        Assert.assertEquals(solution.solution(exA), expRes);
+        Assert.assertEquals(solution.findOddNumbers(exA), expRes);
     }
 
 }

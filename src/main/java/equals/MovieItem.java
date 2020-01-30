@@ -5,7 +5,7 @@ public class MovieItem {
     private int id;
     private String name;
 
-    MovieItem(int id, String name) {
+    private MovieItem(int id, String name) {
         this.name = name;
         this.id = id;
     }
