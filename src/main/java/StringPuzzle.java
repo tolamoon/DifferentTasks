@@ -5,13 +5,11 @@ import java.util.List;
 public class StringPuzzle {
 
     private static String solution(String strIn) {
-        strIn = strIn.replace(".", "");
-        strIn = strIn.toLowerCase();
+        strIn = strIn.replace(".", "").toLowerCase();
         StringBuilder out = new StringBuilder();
         List<String> list = new ArrayList<String>(Arrays.asList(strIn.split(" ")));
 
         String current = list.get(0);
-
         while(!list.isEmpty()){
             current = list.get(0);
             for(int i=1; i<list.size(); i++){

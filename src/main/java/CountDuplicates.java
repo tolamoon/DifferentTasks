@@ -36,9 +36,10 @@ public class CountDuplicates {
         System.out.println("Print after removing duplicates: " + newList);
 
         System.out.println("Counting duplicates: " + newList);
+
         Map<Integer, Integer> newMap = countDuplicates(exList);
         for(Map.Entry<Integer, Integer> entry: newMap.entrySet()){
-            System.out.println(entry.getKey() +  " = " + entry.getValue());
+            System.out.println(entry.getKey() +  " appears " + entry.getValue() + " time(s).");
         }
 
     }
