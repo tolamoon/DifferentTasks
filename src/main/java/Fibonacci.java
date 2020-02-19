@@ -20,7 +20,7 @@ public class Fibonacci {
         if(number == 1 || number == 2){
             return 1;
         }
-        return fibonacci(number-1) + fibonacci(number -2); //tail recursion
+        return fibonacci2(number-1) + fibonacci2(number -2); //tail recursion
 }
 
     public static void main(String[] args){

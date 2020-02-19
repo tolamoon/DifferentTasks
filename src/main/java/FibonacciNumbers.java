@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class FibonacciNumbers {
 
-    public int[] generateFibonacci(int n){
+    static int[] generateFibonacci(int n){
 
         if(n == 1) { return new int[] { 1 }; }
         if(n == 2) { return new int[] { 1, 1 }; }
@@ -21,11 +21,10 @@ public class FibonacciNumbers {
         Scanner scanner = new Scanner(System.in);
         int exn = scanner.nextInt();
 
-        FibonacciNumbers fibs = new FibonacciNumbers();
-        int [] expFib = fibs.generateFibonacci(exn);
+        int [] expFib = generateFibonacci(exn);
 
-        for(int i=0; i<expFib.length; i++){
-            System.out.print(expFib[i] + " ");
+        for (int anExpFib : expFib) {
+            System.out.print(anExpFib + " ");
         }
 
     }

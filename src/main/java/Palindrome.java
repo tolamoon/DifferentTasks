@@ -1,27 +1,29 @@
 public class Palindrome {
 
-    static String isPalindrome(String str) {
+    static boolean isPalindrome(String str) {
+        str = str.toLowerCase();
+        str = str.replaceAll(" ", "");
 
         int begin = 0, end = str.length() - 1;
 
         while (begin < end) {
             if (str.charAt(begin) != str.charAt(end))
-                return "false"; //It is not a palindrome
+                return false; //It is not a palindrome
 
             begin++;
             end--;
         }
         //It is a palindrome
-        return "true";
+        return true;
     }
 
     // Driver code
     public static void main(String[] args)
     {
         String str = "abba";
-        String res = isPalindrome(str);
+        boolean res = isPalindrome(str);
 
-        if (res=="true")
+        if (res)
             System.out.print("Yes, palindrome.");
         else
             System.out.print("No, not palindrome.");

@@ -18,7 +18,10 @@ public class CyclicRotation {
                 K = K % N;
             }
             for(int i=0 ; i<N ; i++){
+                //rotate right
                 rotatedA[( i + K )% N] = A[i];
+                //rotate left
+                //rotatedA[(i+N-K)% N] = A[i];
             }
         }
         return rotatedA;

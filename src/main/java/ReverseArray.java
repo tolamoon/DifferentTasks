@@ -1,9 +1,9 @@
-import java.util.Scanner;
-
 public class ReverseArray {
 
-    private static void reverse(int[] arr, int start, int end){
-        if((arr == null) || (start < 0) || (start >= arr.length) || (end < 0) || (end >= arr.length)) {
+    private static void reverse(int[] arr){
+        int start = 0;
+        int end = arr.length-1;
+        if(start >= arr.length || end < 0 || end >= arr.length) {
             return ;
         }
 
@@ -30,8 +30,7 @@ public class ReverseArray {
         }
         System.out.println();
 
-        reverse(array, 0, array.length-1);
+        reverse(array);
     }
-
 
 }

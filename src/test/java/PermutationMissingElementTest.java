@@ -1,15 +1,8 @@
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PermutationMissingElementTest {
-    private PermutationMissingElement pme;
-
-    @BeforeTest
-    public void setUp(){
-        pme = new PermutationMissingElement();
-    }
 
     @DataProvider(name="testingData")
     public Object[][] createData(){
@@ -30,6 +23,6 @@ public class PermutationMissingElementTest {
 
     @Test(dataProvider = "testingData")
     public void verifySolution(int[] exA, int expMissElem){
-        Assert.assertEquals(pme.solution(exA), expMissElem);
+        Assert.assertEquals(PermutationMissingElement.solution(exA), expMissElem);
     }
 }

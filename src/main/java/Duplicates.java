@@ -1,9 +1,9 @@
 import java.util.*;
 
-public class CountDuplicates {
+public class Duplicates {
 
     private static ArrayList<Integer> removeDuplicates(ArrayList<Integer> array){
-        ArrayList<Integer> newList = new ArrayList<Integer>();
+        ArrayList<Integer> newList = new ArrayList<>();
 
         for(Integer i: array){
             if(!newList.contains(i)){
@@ -14,7 +14,7 @@ public class CountDuplicates {
     }
 
     private static Map<Integer, Integer> countDuplicates(ArrayList<Integer> array){
-        Map<Integer, Integer> duplicates = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> duplicates = new HashMap<>();
 
         for(Integer i: array){
             if(duplicates.containsKey(i)){
@@ -29,7 +29,7 @@ public class CountDuplicates {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> exList = new ArrayList<Integer>(Arrays.asList(1, 10, 1, 2, 2, 3, 3, 10, 3, 4, 5, 5));
+        ArrayList<Integer> exList = new ArrayList<>(Arrays.asList(1, 10, 1, 2, 2, 3, 3, 10, 3, 4, 5, 5));
         System.out.println("ArrayList with duplicates: " + exList);
 
         ArrayList<Integer> newList = removeDuplicates(exList);
